@@ -844,13 +844,17 @@
             <tr><td><span>Action Die: </span></td><td><span>{{action}}</span></td></tr>
             <tr><td><span>Challenge Dice: </span></td><td><span>{{challenge}}</span></td></tr>
         {{/action}}
-    </table>
-    <table>
         {{#vow}}
             <tr><th colspan="2">{{name}}<br>{{vowname}}</th></tr>
             <tr><td><span>Vow Progress: </span></td><td><span>{{vow}}</span></td></tr>
             <tr><td><span>Challenge Dice: </span></td><td><span>{{challenge}}</span></td></tr>
         {{/vow}}
+        {{#custom}}
+            <tr><th colspan="2">{{name}}</th></tr>
+            {{#allprops() custom name}}
+               <tr><td><span>{{key}}</span></td><td><span>{{value}}</span></td>
+            {{/allprops() custom name}}
+        {{/custom}}
     </table>
 
 </rolltemplate>
@@ -916,3 +920,4 @@ on('change:PC_MOMENTUM change:PC_MAX_MOMENTUM', function() {
     });
 });
 </script>
+
