@@ -68,6 +68,25 @@ h5 {
     text-transform: uppercase;
 }
 
+button[type="roll"]{
+    align-items: left;
+    color: black;
+    font-weight: normal;
+    font-size: 20px;
+    text-decoration:none;
+    background:none;
+    background-image:none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+button[type="roll"]:hover{
+    font-weight: bold;
+}
+
 .sheet-heading-left {
     text-align: left;
 }
@@ -193,6 +212,18 @@ hr.sheet-vert {
     font-weight: bold;
     font-size: 14px;
 }
+.sheet-debil-desc {
+    width: 100%;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sheet-vow-name {
+    width: 100%;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-weight: bold;
+    font-size: 14px;
+}
 
 input[type="checkbox"]
 {
@@ -284,4 +315,48 @@ input[type="checkbox"]:checked + span::before
 .sheet-hidden {
     display: none;
     position: absolute;
+}
+
+/* ROLL TEMPLATE */
+
+.sheet-rolltemplate-ironsworn table {
+    width: 100%;
+	border: 1px solid;
+	color: black;
+	font-size: 1em;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+}
+
+.sheet-rolltemplate-ironsworn th {
+    
+	background-color: rgba(67, 75, 77, 1);
+	color: #ffffff;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-ironsworn .userscript-tcat {
+	font-weight: bold;
+}
+
+.sheet-rolltemplate-ironsworn td {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-ironsworn tr:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-ironsworn tr:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+
+.sheet-rolltemplate-ironsworn .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1); /*Cool Gray 6 C*/
 }
