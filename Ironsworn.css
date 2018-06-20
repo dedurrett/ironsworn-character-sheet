@@ -40,11 +40,21 @@ h3 {
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
     font-weight: bold;
     width: 100%;
+    line-height: 28px;
     font-size: 18px;
     text-align: center;
     margin: 0 0 0px;
     padding: 0;
     text-transform: uppercase;
+}
+
+h3.sheet-divide::after, h3.sheet-divide::before {
+    display: inline-block;
+    content: "";
+    height: 5px;
+    border-top: 2px solid black;
+    top: 0;
+    width: 220px;
 }
 
 h4 {
@@ -98,12 +108,35 @@ hr {
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-hr.sheet-vert {
-    border: 0;
-    width: 40px;
-    background: #ccc;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
-    transform:rotate(90deg)
+.sheet-vertleft {
+    border-left: 2px solid black;
+    height: 1000px;
+    margin-left: 20px;
+    -webkit-border-image: 
+      -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+    -o-border-image:
+      -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0)) 1 100%;
+}
+.sheet-vertright {
+    border-right: 2px solid black;
+    height: 1000px;
+    margin-right: 20px;
+    -webkit-border-image: 
+      -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+    -o-border-image:
+      -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0)) 1 100%;
 }
 
 .sheet-stats {
